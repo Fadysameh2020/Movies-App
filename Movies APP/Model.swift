@@ -6,19 +6,21 @@
 //
 
 import Foundation
+
 class Movie : Decodable{
-    var id : Int?
-    var vote_average : Int?
-    var title : String?
-    var poster_path : String?
-    var overview : String?
-    var release_date : String?
+    var id: Int?
+    var vote_average: Double?
+    var title: String?
+    var poster_path: String?
+    var overview: String?
+    var release_date: String?
 }
 
 class MyResult : Decodable{
-    var results : [Movie]?
+    var results: [Movie]?
     var page: Int?
-    var errorMessage : String?
+    var total_pages: Int?
+    var total_results: Int?
 }
 
 func fetchResult(complitionHandler: @escaping (MyResult?) -> Void){
