@@ -17,7 +17,6 @@
 		A769D3012A1291ED00184338 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769D2FF2A1291ED00184338 /* MovieCollectionViewCell.swift */; };
 		A769D3022A1291ED00184338 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A769D3002A1291ED00184338 /* MovieCollectionViewCell.xib */; };
 		A769D3042A12943200184338 /* TopPopularMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769D3032A12943200184338 /* TopPopularMoviesViewController.swift */; };
-		A769D3072A13E32E00184338 /* DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769D3062A13E32E00184338 /* DeepLinks.swift */; };
 		A7B789992A1142B0001963F8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B789982A1142B0001963F8 /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		A769D2FF2A1291ED00184338 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		A769D3002A1291ED00184338 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		A769D3032A12943200184338 /* TopPopularMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPopularMoviesViewController.swift; sourceTree = "<group>"; };
-		A769D3062A13E32E00184338 /* DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinks.swift; sourceTree = "<group>"; };
 		A7B789982A1142B0001963F8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +107,6 @@
 				A75BD0B82A113C36008A237F /* AppDelegate.swift */,
 				A75BD0BA2A113C36008A237F /* SceneDelegate.swift */,
 				A75BD0C12A113C3B008A237F /* Assets.xcassets */,
-				A769D3062A13E32E00184338 /* DeepLinks.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				A75BD0BD2A113C36008A237F /* ViewController.swift in Sources */,
 				A769D3042A12943200184338 /* TopPopularMoviesViewController.swift in Sources */,
 				A769D3012A1291ED00184338 /* MovieCollectionViewCell.swift in Sources */,
-				A769D3072A13E32E00184338 /* DeepLinks.swift in Sources */,
 				A75BD0B92A113C36008A237F /* AppDelegate.swift in Sources */,
 				A75BD0BB2A113C36008A237F /* SceneDelegate.swift in Sources */,
 			);

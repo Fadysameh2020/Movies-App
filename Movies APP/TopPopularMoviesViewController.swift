@@ -34,6 +34,7 @@ class TopPopularMoviesViewController: UIViewController {
         let nib = UINib(nibName: "MovieCollectionViewCell", bundle: nil)
         MoviesCollectionView.register(nib, forCellWithReuseIdentifier: "movieCell")
         
+        navigationItem.title = "Top Movies"
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.center = view.center
         view.addSubview(indicator)
@@ -42,6 +43,7 @@ class TopPopularMoviesViewController: UIViewController {
         fetchResult(){ myresult in
             DispatchQueue.main.async {
                 self.moviesArray = myresult?.results
+                self.searchArray = myresult?.results
                 self.MoviesCollectionView.reloadData()
                 indicator.stopAnimating()
             }
@@ -91,7 +93,7 @@ extension TopPopularMoviesViewController: UICollectionViewDataSource, UICollecti
 }
 
 // MARK: - Search Bar
-extension TopPopularMoviesViewController : UISearchBarDelegate {
+extension TopPopularMoviesViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         moviesArray = []
         if searchText == "" {
