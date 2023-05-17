@@ -42,8 +42,8 @@ class TopPopularMoviesViewController: UIViewController {
         
         fetchResult(){ myresult in
             DispatchQueue.main.async {
-                self.moviesArray = myresult?.results
-                self.searchArray = myresult?.results
+                self.moviesArray = myresult?.items
+                self.searchArray = myresult?.items
                 self.MoviesCollectionView.reloadData()
                 indicator.stopAnimating()
             }
@@ -76,11 +76,8 @@ extension TopPopularMoviesViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! MovieCollectionViewCell
-        let movie = self.moviesArray?[indexPath.row]
-//        let movieImage = URL(string:movie?.poster_path ?? "knives")
-//        cell.MovieImageView?.kf.setImage(with:movieImage)
-        cell.MovieImageView.image = UIImage(named: "knives")
-        cell.MovieTitle_Label.text = movie?.title
+        cell.MovieTitle_Label.text = moviesArray?[indexPath.row].title
+        cell.MovieImageView?.kf.setImage(with: URL(string: (moviesArray?[indexPath.row].image)!))
         return cell
     }
     

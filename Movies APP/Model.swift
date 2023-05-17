@@ -8,24 +8,23 @@
 import Foundation
 
 class Movie : Decodable{
-    var id: Int?
-    var vote_average: Double?
-    var title: String?
-    var poster_path: String?
-    var overview: String?
-    var release_date: String?
+    var id : String?
+    var rank : String?
+    var title : String?
+    var image : String?
+    var weekend : String?
+    var gross : String?
+    var weeks : String?
 }
 
 class MyResult : Decodable{
-    var results: [Movie]?
-    var page: Int?
-    var total_pages: Int?
-    var total_results: Int?
+    var items : [Movie]
+    var errorMessage : String?
 }
 
 func fetchResult(complitionHandler: @escaping (MyResult?) -> Void){
     
-    let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=fdbde11438b838998dd5d98eea5ec77a&language=en-US&page=1")
+    let url = URL(string: "https://imdb-api.com/en/API/BoxOffice/k_30uvhodk")
     guard let newUrl = url else{
         return
     }
